@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "./styles.css";
 
 const Main = () => {
   return (
-    <div>
-      <h1>Hello VICO World</h1>
+    <div className="container">
+      <h1 className="title">Hello VICO World</h1>
     </div>
   );
 };
