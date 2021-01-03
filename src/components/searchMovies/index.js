@@ -14,7 +14,7 @@ const SearchMovies = () => {
           className="input"
           placeholder="What for a movie..?"
         />
-        <button type="submit" className="submit-button">
+        <button type="submit" className="button">
           Search
         </button>
       </form>

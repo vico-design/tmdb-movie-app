@@ -7,10 +7,10 @@ html {
 }
 
 body {
-  margin: 0px;
-  padding: 0px;
-  background-color: blue;
-  color: aqua;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(244, 244, 244);
+  color: #333;
 }
 
 p {
