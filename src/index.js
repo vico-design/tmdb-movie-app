@@ -1,13 +1,14 @@
-import React from "react";
+import react from "react";
 import ReactDOM from "react-dom";
-import "./styles.css";
-import SearchMovies from "./components/searchMovies/index";
+// import SearchMovies from "./components/searchMovies/index";
+import App from "./App";
 
 const Main = () => {
   return (
     <div className="container">
-      <h1 className="title">Hello VICO World</h1>
-      <SearchMovies />
+      <App />
+      {/* <h1 className="title">Movie Search</h1>
+      <SearchMovies /> */}
     </div>
   );
 };

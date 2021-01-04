@@ -44,17 +44,7 @@ const SearchMovies = () => {
         {movies
           .filter((movie) => movie.poster_path)
           .map((movie) => (
-            <MovieCard
-              //   path={movie.poster_path}
-              //   id={movie.id}
-              //   title={movie.title}
-              //   date={movie.release_date}
-              //   vote={movie.vote_average}
-              //   overview={movie.overview}
-              //   key={movie.id}
-              movie={movie}
-              key={movie.id}
-            />
+            <MovieCard movie={movie} key={movie.id} />
           ))}
       </div>
     </div>
