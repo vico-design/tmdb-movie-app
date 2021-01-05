@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./styles.css";
 import Row from "./row";
 import requests from "./requests";
 import Banner from "./banner";
 import Navbar from "./navbar";
+import axios from "./axios";
 
 const App = () => {
+  //   const blabla = async () => {
+  //     const results = await axios.get(requests.fetchActionMovies);
+  //     console.log(results);
+  //   };
+  //   useEffect(() => {
+  //     blabla();
+  //   }, []);
+
   return (
     <div className="app">
       <Navbar />
