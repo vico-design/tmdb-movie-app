@@ -1,4 +1,11 @@
-html {
+body {
+  margin: 0;
+}
+.app {
+  background-color: #111;
+}
+
+/* html {
   font-size: 10px;
 }
 
@@ -31,3 +38,4 @@ small {
   font-size: 4.4rem;
   text-align: center;
 }
+ */
