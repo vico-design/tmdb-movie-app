@@ -12,12 +12,12 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
 
   //i think here is the problem
   useEffect(() => {
-    async function fetchData() {
+    (async () => {
       const request = await axios.get(fetchUrl);
+
       setMovies(request.data.results);
-    }
-    fetchData();
-  }, [fetchUrl]);
+    })();
+  }, []);
 
   const opts = {
     height: "390",
@@ -33,6 +33,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
     } else {
       movieTrailer(movie?.name || "")
         .then((url) => {
+          console.log(url);
           const urlParams = new URLSearchParams(new URL(url).search);
           setTrailerUrl(urlParams.get("v"));
         })
@@ -49,7 +50,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
           .map((movie) => (
             <img
               key={movie.id}
-              onClick={handleClick(movie)}
+              onClick={() => handleClick(movie)}
               className={`row--poster ${isLargeRow && "row--posterLarge"}`}
               src={`${base_url}${
                 isLargeRow ? movie.poster_path : movie.backdrop_path
