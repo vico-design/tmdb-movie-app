@@ -12,15 +12,15 @@ const App = () => {
       <Banner />
       <Row
         title="Netflix Originals"
-        fetchURL={requests.fetchNetflixOriginals}
+        fetchUrl={requests.fetchNetflixOriginals}
         isLargeRow
       />
-      <Row title="Trending Now" fetchURL={requests.fetchTopRated} />
-      <Row title="Action Movies" fetchURL={requests.fetchActionMovies} />
-      <Row title="Comedy Movies" fetchURL={requests.fetchComedyMovies} />
-      <Row title="Horror Movies" fetchURL={requests.fetchHorrorMovies} />
-      <Row title="Romance Movies" fetchURL={requests.fetchRomanceMovies} />
-      <Row title="Documentaries" fetchURL={requests.fetchDocumentaries} />
+      <Row title="Trending Now" fetchUrl={requests.fetchTopRated} />
+      <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
+      <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
+      <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
+      <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
+      <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
     </div>
   );
 };
