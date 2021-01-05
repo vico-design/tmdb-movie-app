@@ -10,7 +10,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
   const [movies, setMovies] = useState([]);
   const [trailerUrl, setTrailerUrl] = useState("");
 
-  //aca hay un problema
+  //i think here is the problem
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(fetchUrl);
