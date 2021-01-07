@@ -1,10 +1,10 @@
 import React from "react";
 import "./styles.css";
-import Row from "./row";
+import Row from "./components/row";
 import requests from "./requests";
-import Banner from "./banner";
-import Navbar from "./navbar";
-import Footer from "./footer";
+import Banner from "./components/banner";
+import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 
 const App = () => {
   return (

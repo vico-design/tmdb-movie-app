@@ -1,6 +1,6 @@
 import "./styles.css";
 import React, { useEffect, useState } from "react";
-
+import SearchMovies from "../searchMovies";
 const Navbar = () => {
   const [show, handleShow] = useState(false);
 
@@ -25,6 +25,7 @@ const Navbar = () => {
         src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
         alt="Netflix logo"
       />
+      <SearchMovies />
       <img
         className="nav--avatar"
         src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
