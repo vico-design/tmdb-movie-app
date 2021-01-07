@@ -1,9 +1,52 @@
-* {
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  background-color: #111;
+}
+
+#root {
+  height: 100%;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.body-container {
+  flex: 1;
+}
+
+/* * {
   margin: 0;
 }
 .app {
   background-color: #111;
 }
+html {
+  background-color: #111;
+}
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+html,
+body {
+  height: 100%;
+
+} */
+/* .body-container {
+  flex: 1;
+  background-color: #ddf1f5;
+} */
 
 /* html {
   font-size: 10px;

@@ -1,28 +1,21 @@
 import React from "react";
-import "./styles.css";
-import Row from "./components/row";
-import requests from "./requests";
-import Banner from "./components/banner";
+import { Route, Switch } from "react-router-dom";
 import Navbar from "./components/navbar";
+import Home from "./pages/home";
+import Search from "./pages/search";
 import Footer from "./components/footer";
+import "./styles.css";
 
 const App = () => {
   return (
-    <div className="app">
+    <div className="app-container">
       <Navbar />
-      <Banner />
-      <Row title="Trending Now" fetchUrl={requests.fetchTopRated} />
-      <Row
-        title="NETFLIX ORIGINALS"
-        fetchUrl={requests.fetchNetflixOriginals}
-        isLargeRow
-      />
-      <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
-      <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
-      <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
-      <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
-      <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
-      <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
+      <div className="body-container">
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/search" component={Search} />
+        </Switch>
+      </div>
       <Footer />
     </div>
   );
