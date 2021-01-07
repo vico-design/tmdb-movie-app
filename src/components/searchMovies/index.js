@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useHistory, useLocation } from "react-router-dom";
+
 import "./styles.css";
 import MovieCard from "../movieCard";
 
@@ -6,7 +8,10 @@ const SearchMovies = () => {
   const [query, setQuery] = useState("");
   const [movies, setMovies] = useState([]);
 
+  const { push, location } = useHistory();
+
   const searchMovies = async (e) => {
+    push(`/search?userInput=${query}`);
     e.preventDefault();
 
     const key = "1cbcb64c17acb19db80ea5084e209e62";
@@ -25,28 +30,24 @@ const SearchMovies = () => {
   return (
     <div>
       <form className="form" onSubmit={searchMovies}>
-        <label htmlFor="query" className="label">
-          Movie Name
-        </label>
+        {/* <label htmlFor="query" className="label" /> */}
+
         <input
           type="text"
           name="query"
           className="input"
-          placeholder="What for a movie..?"
+          placeholder="Titles, people, genres"
           onChange={(e) => setQuery(e.target.value)}
           value={query}
         />
-        <button type="submit" className="button">
-          Search
-        </button>
       </form>
-      {/* <div className="card-list">
+      <div className="search-result-component">
         {movies
           .filter((movie) => movie.poster_path)
           .map((movie) => (
             <MovieCard movie={movie} key={movie.id} />
           ))}
-      </div> */}
+      </div>
     </div>
   );
 };

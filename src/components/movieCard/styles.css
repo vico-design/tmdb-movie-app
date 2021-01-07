@@ -1,21 +1,17 @@
-.card-list {
-  margin-top: 4rem;
+.search-result-component {
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  padding: 54px;
+  padding-left: 122px;
+  width: 100%;
 }
 
-.card {
-  padding: 2rem 4rem;
-  border-radius: 10px;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
-  margin-bottom: 2rem;
-  background-color: white;
-}
-
-.card--title {
-  margin-bottom: 0.5rem;
-  font-size: 3.2rem;
-}
-
-.card--image {
-  margin: 0 auto;
-  display: block;
+.search-movie {
+  object-fit: contain;
+  max-height: 150px;
+  transition: transform 500ms;
+  margin-right: 10px !important;
+  border-radius: 5px;
+  margin: 3vw 0;
 }

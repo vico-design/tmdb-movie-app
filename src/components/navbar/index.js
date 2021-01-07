@@ -1,6 +1,8 @@
 import "./styles.css";
 import React, { useEffect, useState } from "react";
 import SearchMovies from "../searchMovies";
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   const [show, handleShow] = useState(false);
 
@@ -20,11 +22,14 @@ const Navbar = () => {
 
   return (
     <div className={`nav ${show && "nav--black"}`}>
-      <img
-        className="nav--logo"
-        src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
-        alt="Netflix logo"
-      />
+      <Link to="/">
+        <img
+          className="nav--logo"
+          src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
+          alt="Netflix logo"
+        />
+      </Link>
+
       <SearchMovies />
       <img
         className="nav--avatar"
