@@ -29,3 +29,17 @@
   width: 40px;
   object-fit: contain;
 }
+
+.input {
+  position: fixed;
+  right: 84px;
+  top: 23px;
+  width: 200px;
+  object-fit: contain;
+  height: 31px;
+  background-color: black;
+  border: 2px solid white;
+  padding-left: 10px;
+  font-size: 15px;
+  color: white;
+}
