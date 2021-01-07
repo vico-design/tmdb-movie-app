@@ -1,10 +1,12 @@
 import "./styles.css";
 import React, { useEffect, useState } from "react";
-import SearchMovies from "../searchMovies";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const Navbar = () => {
   const [show, handleShow] = useState(false);
+  const [query, setQuery] = useState("");
+
+  const { push } = useHistory();
 
   //interesting function to show the background of the nav when we scroll
   useEffect(() => {
@@ -20,6 +22,11 @@ const Navbar = () => {
     };
   }, []);
 
+  //save userInput in the URL
+  const searchMovies = () => {
+    push(`/search?query=${query}`);
+  };
+
   return (
     <div className={`nav ${show && "nav--black"}`}>
       <Link to="/">
@@ -29,8 +36,16 @@ const Navbar = () => {
           alt="Netflix logo"
         />
       </Link>
-
-      <SearchMovies />
+      <form className="form" onSubmit={searchMovies}>
+        <input
+          type="text"
+          name="query"
+          className="input"
+          placeholder="Titles, people, genres"
+          onChange={(e) => setQuery(e.target.value)}
+          value={query}
+        />
+      </form>
       <img
         className="nav--avatar"
         src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"

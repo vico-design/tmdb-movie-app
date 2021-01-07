@@ -9,7 +9,6 @@ const MovieCard = ({ movie }) => {
       {movie.backdrop_path && (
         <img
           key={movie.id}
-          // onClick={() => handleClick(movie)}
           className="search-movie"
           src={`${base_url}${movie.backdrop_path}`}
           alt={movie.name}
@@ -21,6 +20,7 @@ const MovieCard = ({ movie }) => {
 
 export default MovieCard;
 
+//Use it when clicking the img.. so get more info about the movie
 // <img
 //   className="card--image"
 //   src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}`}
