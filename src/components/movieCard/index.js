@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./styles.css";
 import axios from "../../axios";
 import YouTube from "react-youtube";
-import { useHistory } from "react-router-dom";
+
 const base_url = "https://image.tmdb.org/t/p/original/";
 
 const MovieCard = ({ movie }) => {
@@ -16,6 +16,7 @@ const MovieCard = ({ movie }) => {
     },
   };
 
+  //SHOW THE TRAILER BUT IN ANOTHER COMPONENT WITH MORE INFO LIKE ABOVE:
   const handleClick = async (movie) => {
     if (trailerUrl) {
       setTrailerUrl("");

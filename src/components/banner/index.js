@@ -4,6 +4,7 @@ import axios from "./../../axios";
 
 const Banner = () => {
   const [movie, setMovie] = useState([]);
+
   const API_KEY = "1cbcb64c17acb19db80ea5084e209e62";
 
   useEffect(() => {
@@ -16,11 +17,11 @@ const Banner = () => {
           Math.floor(Math.random() * request.data.results.length - 1)
         ]
       );
-      return request;
     }
     fetchData();
   }, []);
 
+  //set a limit of  character  to show (description )
   function truncate(str, n) {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
   }
