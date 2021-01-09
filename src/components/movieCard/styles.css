@@ -1,6 +1,5 @@
 .search-result-component {
   display: flex;
-  /* flex-direction: column; */
   flex-wrap: wrap;
   padding: 54px;
   padding-left: 122px;
@@ -14,4 +13,10 @@
   margin-right: 10px !important;
   border-radius: 5px;
   margin: 3vw 0;
+}
+
+.search-movie:hover {
+  transform: scale(1.12);
+  border-radius: 5px;
+  cursor: pointer;
 }

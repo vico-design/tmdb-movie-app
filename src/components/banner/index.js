@@ -1,14 +1,16 @@
 import "./styles.css";
 import React, { useEffect, useState } from "react";
 import axios from "./../../axios";
-import requests from "./../../requests";
 
 const Banner = () => {
   const [movie, setMovie] = useState([]);
+  const API_KEY = "1cbcb64c17acb19db80ea5084e209e62";
 
   useEffect(() => {
     async function fetchData() {
-      const request = await axios.get(requests.fetchNetflixOriginals);
+      const request = await axios.get(
+        `/discover/tv?api_key=${API_KEY}&with_networks=213`
+      );
       setMovie(
         request.data.results[
           Math.floor(Math.random() * request.data.results.length - 1)

@@ -1,19 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
-
+import axios from "../../axios";
+import YouTube from "react-youtube";
+import { useHistory } from "react-router-dom";
 const base_url = "https://image.tmdb.org/t/p/original/";
 
 const MovieCard = ({ movie }) => {
+  const [trailerUrl, setTrailerUrl] = useState("");
+
+  const opts = {
+    height: "390",
+    width: "100%",
+    playerVars: {
+      autoplay: 1,
+    },
+  };
+
+  const handleClick = async (movie) => {
+    if (trailerUrl) {
+      setTrailerUrl("");
+    } else {
+      let trailerurl = await axios.get(
+        `/movie/${movie.id}/videos?api_key=1cbcb64c17acb19db80ea5084e209e62`
+      );
+      setTrailerUrl(trailerurl.data.results[0]?.key);
+    }
+  };
+
   return (
     <div>
-      {movie.backdrop_path && (
-        <img
-          key={movie.id}
-          className="search-movie"
-          src={`${base_url}${movie.backdrop_path}`}
-          alt={movie.name}
-        />
-      )}
+      <div>
+        {movie.backdrop_path && (
+          <img
+            key={movie.id}
+            onClick={() => handleClick(movie)}
+            className="search-movie"
+            src={`${base_url}${movie.backdrop_path}`}
+            alt={movie.name}
+          />
+        )}
+      </div>
+      {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
     </div>
   );
 };
