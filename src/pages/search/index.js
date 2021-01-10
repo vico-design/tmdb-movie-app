@@ -3,11 +3,11 @@ import { useLocation } from "react-router-dom";
 import MovieCard from "./../../components/movieCard";
 
 const Search = () => {
-  const [movies, setMovies] = useState([]);
-  const [query, setQuery] = useState(searchParams.get("query"));
-
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
+
+  const [movies, setMovies] = useState([]);
+  const [query, setQuery] = useState(searchParams.get("query"));
 
   useEffect(() => {
     (async () => {
