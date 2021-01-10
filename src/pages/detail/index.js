@@ -11,7 +11,8 @@ const Detail = () => {
   const searchParams = new URLSearchParams(location.search);
 
   const [movieId, setMovieId] = useState(searchParams.get("detail"));
-  const [detailMovie, setDetailMovie] = useState("");
+  const [detailMovie, setDetailMovie] = useState({});
+  const [button, setButton] = useState(true);
 
   useEffect(() => {
     (async () => {
@@ -39,31 +40,49 @@ const Detail = () => {
   const handleClick = async (detailMovie) => {
     if (trailerUrl) {
       setTrailerUrl("");
+      setButton(!button);
     } else {
       let trailerurl = await axios.get(
         `/movie/${detailMovie}/videos?api_key=1cbcb64c17acb19db80ea5084e209e62`
       );
       setTrailerUrl(trailerurl.data.results[0]?.key);
+      setButton(!button);
     }
   };
 
   return (
-    <div>
-      <div className="detail-movie-info">
-        <img
+    <div className="movie-info">
+      <div className="detail-img">
+        <header
           className="detail--image"
-          onClick={() => handleClick(detailMovie.id)}
-          src={`https://image.tmdb.org/t/p/original/${detailMovie.backdrop_path}`}
-          alt={detailMovie.title}
-        />
-        <h1>{detailMovie.title}</h1>
-        <p>{detailMovie.overview}</p>
-        <p>RELEASE DATE: {detailMovie.release_date}</p>
-        <p>RATING: {detailMovie.vote_average}</p>
+          style={{
+            backgroundSize: "cover",
+            backgroundImage: `url("https://image.tmdb.org/t/p/original/${detailMovie.backdrop_path}")`,
+            backgroundPosition: "center center",
+          }}
+        >
+          <button
+            className="detail--image--button"
+            onClick={() => handleClick(detailMovie.id)}
+          >
+            {button ? "Play" : "Close"}
+          </button>
+          <div className="img-fadeBottom" />
+        </header>
       </div>
-      <div className="trailer-video">
-        {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
+      <div className="text-detail">
+        <h1 className="detail-title">{detailMovie.title}</h1>
+        <p className="detail-description">{detailMovie.overview}</p>
+        <p className="detail-release">
+          <span className="span">RELEASE DATE: </span>
+          {detailMovie.release_date}
+        </p>
+        <p className="detail-rating">
+          <span className="span">RATING: </span>
+          {detailMovie.vote_average}
+        </p>
       </div>
+      {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
     </div>
   );
 };
