@@ -1,7 +1,72 @@
-h1 {
+.movie-info {
+  width: 50%;
+  height: 140vh;
+  margin: auto;
+  margin-top: 100px;
+  background-color: #2e2828;
+}
+
+.detail--image {
+  color: white;
+  object-fit: contain;
+  height: 675px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.detail--image img {
+  height: 50px;
+}
+.detail--image--button {
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  border-radius: 0.2vw;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-left: 1rem;
+  padding-top: 0.5rem;
+  background-color: rgba(51, 51, 51, 0.5);
+  padding-bottom: 0.5rem;
+  font-size: 1rem;
+  display: flex;
+  width: 100px;
+}
+.detail-title {
+  font-size: 40px;
   color: white;
 }
-.detail--image {
-  width: 100%;
-  cursor: pointer;
+.detail-description {
+  font-size: 19px;
+  color: white;
+  padding: 50px 0;
+}
+.detail-release,
+.detail-rating {
+  color: white;
+}
+
+.span {
+  color: grey;
+}
+
+.img-fadeBottom {
+  height: 6.4rem;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(37, 37, 37, 0.61),
+    #111
+  );
+}
+
+.detail--image--button:hover {
+  color: #000;
+  background-color: #e6e6e6;
+  transition: all 0.2s;
+}
+.text-detail {
+  margin-left: 10px;
 }
