@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Navbar from "./components/navbar";
 import Home from "./pages/home";
 import Search from "./pages/search";
+import Detail from "./pages/detail";
 import Footer from "./components/footer";
 import "./styles.css";
 
@@ -14,6 +15,7 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/search" component={Search} />
+          <Route exact path="/detail" component={Detail} />
         </Switch>
       </div>
       <Footer />
