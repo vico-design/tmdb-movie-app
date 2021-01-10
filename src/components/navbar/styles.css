@@ -1,3 +1,14 @@
+.form {
+  height: 42px;
+  display: flex;
+  align-items: center;
+}
+.form i {
+  color: white;
+  font-size: 32px;
+  margin-right: 335px;
+  font-weight: bolder;
+}
 .nav {
   position: fixed;
   top: 0;

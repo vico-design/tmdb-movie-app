@@ -37,6 +37,7 @@ const Navbar = () => {
         />
       </Link>
       <form className="form" onSubmit={searchMovies}>
+        <i class="ri-search-line"></i>
         <input
           type="text"
           name="query"
