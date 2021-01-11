@@ -20,7 +20,7 @@ const MovieCard = ({ movie }) => {
           <img
             key={movie.id}
             onClick={handleClick}
-            className="search-movie"
+            className="movie"
             src={`${base_url}${movie.backdrop_path}`}
             alt={movie.name}
           />
