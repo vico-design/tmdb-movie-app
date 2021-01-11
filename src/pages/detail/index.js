@@ -30,7 +30,7 @@ const Detail = () => {
   }, [movieId]);
 
   const opts = {
-    height: "390",
+    height: "300",
     width: "100%",
     playerVars: {
       autoplay: 1,
@@ -52,37 +52,50 @@ const Detail = () => {
 
   return (
     <div className="movie-info">
-      <div className="detail-img">
-        <header
-          className="detail--image"
-          style={{
-            backgroundSize: "cover",
-            backgroundImage: `url("https://image.tmdb.org/t/p/original/${detailMovie.backdrop_path}")`,
-            backgroundPosition: "center center",
-          }}
+      <header
+        className="detail--image"
+        style={{
+          backgroundSize: "cover",
+          backgroundImage: `url("https://image.tmdb.org/t/p/original/${detailMovie.backdrop_path}")`,
+          backgroundPosition: "center center",
+        }}
+      >
+        <h1 className="detail-image-title">{detailMovie.title}</h1>
+        <button
+          className="detail--image--button"
+          onClick={() => handleClick(detailMovie.id)}
         >
-          <button
-            className="detail--image--button"
-            onClick={() => handleClick(detailMovie.id)}
-          >
-            {button ? "Play" : "Close"}
-          </button>
-          <div className="img-fadeBottom" />
-        </header>
-      </div>
+          {button ? "Play" : "Close"}
+        </button>
+        <div className="img-fadeBottom" />
+      </header>
       <div className="text-detail">
-        <h1 className="detail-title">{detailMovie.title}</h1>
         <p className="detail-description">{detailMovie.overview}</p>
-        <p className="detail-release">
-          <span className="span">RELEASE DATE: </span>
-          {detailMovie.release_date}
-        </p>
-        <p className="detail-rating">
-          <span className="span">RATING: </span>
-          {detailMovie.vote_average}
-        </p>
+
+        <div className="release-rating">
+          <p className="detail-release">
+            <span className="span">RELEASE DATE: </span>
+            {detailMovie.release_date}
+          </p>
+          <p className="detail-rating">
+            <span className="span">RATING: </span>
+            {detailMovie.vote_average}
+          </p>
+          {detailMovie.genres && (
+            <p className="genres">
+              <span className="span">GENRES:</span>
+              {detailMovie.genres.map((gen) => (
+                <li className="genres-list" key={gen.name}>
+                  {gen.name}
+                </li>
+              ))}
+            </p>
+          )}
+        </div>
       </div>
-      {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
+      <div className="trailer">
+        {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
+      </div>
     </div>
   );
 };

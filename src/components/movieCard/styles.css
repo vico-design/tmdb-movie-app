@@ -1,12 +1,4 @@
-.search-result-component {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 54px;
-  padding-left: 122px;
-  width: 100%;
-}
-
-.search-movie {
+.movie {
   object-fit: contain;
   max-height: 150px;
   transition: transform 500ms;
@@ -15,7 +7,7 @@
   margin: 3vw 0;
 }
 
-.search-movie:hover {
+.movie:hover {
   transform: scale(1.12);
   border-radius: 5px;
   cursor: pointer;
