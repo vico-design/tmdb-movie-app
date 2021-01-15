@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/tmdb-movie-app/static/css/main.41fe141d.chunk.css",
-    "main.js": "/tmdb-movie-app/static/js/main.bf4a3afa.chunk.js",
-    "main.js.map": "/tmdb-movie-app/static/js/main.bf4a3afa.chunk.js.map",
+    "main.js": "/tmdb-movie-app/static/js/main.a1655c8c.chunk.js",
+    "main.js.map": "/tmdb-movie-app/static/js/main.a1655c8c.chunk.js.map",
     "runtime-main.js": "/tmdb-movie-app/static/js/runtime-main.9734636e.js",
     "runtime-main.js.map": "/tmdb-movie-app/static/js/runtime-main.9734636e.js.map",
-    "static/js/2.b7d25e1d.chunk.js": "/tmdb-movie-app/static/js/2.b7d25e1d.chunk.js",
-    "static/js/2.b7d25e1d.chunk.js.map": "/tmdb-movie-app/static/js/2.b7d25e1d.chunk.js.map",
+    "static/js/2.04e0adde.chunk.js": "/tmdb-movie-app/static/js/2.04e0adde.chunk.js",
+    "static/js/2.04e0adde.chunk.js.map": "/tmdb-movie-app/static/js/2.04e0adde.chunk.js.map",
     "index.html": "/tmdb-movie-app/index.html",
     "static/css/main.41fe141d.chunk.css.map": "/tmdb-movie-app/static/css/main.41fe141d.chunk.css.map",
-    "static/js/2.b7d25e1d.chunk.js.LICENSE.txt": "/tmdb-movie-app/static/js/2.b7d25e1d.chunk.js.LICENSE.txt"
+    "static/js/2.04e0adde.chunk.js.LICENSE.txt": "/tmdb-movie-app/static/js/2.04e0adde.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9734636e.js",
-    "static/js/2.b7d25e1d.chunk.js",
+    "static/js/2.04e0adde.chunk.js",
     "static/css/main.41fe141d.chunk.css",
-    "static/js/main.bf4a3afa.chunk.js"
+    "static/js/main.a1655c8c.chunk.js"
   ]
 }
