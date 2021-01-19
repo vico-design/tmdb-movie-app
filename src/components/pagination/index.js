@@ -8,30 +8,32 @@ const Pagination = ({ pagination, changePage }) => {
     <div className="pagination-container">
       <button
         disabled={pageInfo === 1}
-        className="button-hover"
+        className="button-hover button"
         onClick={() => changePage("previous")}
       >
         Previous
       </button>
 
       {pageInfo !== 1 && (
-        <button className="pagination-button" disabled>
+        <button className="pagination-button button" disabled>
           {pageInfo - 1}
         </button>
       )}
-      <button disabled className="current-page pagination-button">
+      <button disabled className="current-page pagination-button button">
         {pageInfo}
       </button>
       {totalPages - pageInfo > 0 && (
-        <button disabled className="pagination-button">
+        <button disabled className="pagination-button button">
           {pageInfo + 1}
         </button>
       )}
       {totalPages - pageInfo - 1 > 0 && <p>...</p>}
-      {totalPages - pageInfo - 1 > 0 && <p>{totalPages - pageInfo - 1}</p>}
+      {totalPages - pageInfo - 1 > 0 && (
+        <p className="button">{totalPages - pageInfo - 1}</p>
+      )}
       <button
         disabled={totalPages - pageInfo === 0}
-        className="button-hover pagination-button"
+        className="button-hover pagination-button button"
         onClick={() => changePage("next")}
       >
         Next

@@ -12,3 +12,10 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 700px) {
+  .movie {
+    width: 172px;
+    margin-right: 7px !important;
+  }
+}

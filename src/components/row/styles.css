@@ -39,3 +39,16 @@
 .row--posterLarge:hover {
   transform: scale(1.12);
 }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+  .row {
+    margin-left: 0px;
+  }
+  .row--title {
+    font-size: 1.2rem;
+    padding-bottom: 0px;
+  }
+  .row--poster {
+    width: 60%;
+  }
+}
