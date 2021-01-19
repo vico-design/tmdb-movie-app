@@ -92,3 +92,31 @@
   background-color: #e6e6e6;
   transition: all 0.2s;
 }
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 812px) {
+  .detail--image {
+    height: 400px;
+  }
+  .detail-image-title {
+    font-size: 25px;
+  }
+  .detail--image--button {
+    font-size: 0.8rem;
+    width: 50px;
+    justify-content: center;
+  }
+
+  .movie-info {
+    margin: 0px;
+    width: 100%;
+  }
+  .detail-description {
+    font-size: 13px;
+  }
+  .release-rating p {
+    font-size: 10px;
+  }
+  .release-rating {
+    justify-content: end;
+  }
+}

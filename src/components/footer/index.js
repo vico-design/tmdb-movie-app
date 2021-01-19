@@ -37,10 +37,10 @@ const Footer = () => {
               New Recipes
             </a>
             <a
-              href="https://github.com/vico-design/SpeedTypingGame-React"
+              href="https://github.com/vico-design/covid-19-tracker"
               target="_blank"
             >
-              Typing Game
+              Covid-19 tracker
             </a>
             <a
               href="https://vico-design.github.io/CapstoneProject-React/"
